@@ -12,6 +12,7 @@ body {
     display: flex;
     flex-direction: column;
     font-family: sans-serif;
+    background-color: #5D8EFB;
 }
 img {
     vertical-align: middle;
@@ -25,16 +26,11 @@ img {
     padding: 0 20px;
 }
 
-.sign-up {
-    padding: 100px 0;
-    height: 100%;
-    background-color: #5D8EFB;
-}
 
 .sign-up__inner {
     position: relative;
     max-width: 800px;
-    margin: 0 auto;
+    margin: 100px auto 50px;
     width: 100%;
     padding: 40px 80px;
     border-radius: 10px;
@@ -128,10 +124,21 @@ label{
 }
 
 
+.sign-up__alerts {
+    margin: 0 0 20px;
+}
+
 
 @media only screen and (max-width:576px) {
     .sign-up__inner {
         padding: 10px 20px;
+        margin: 20px 0;
+    }
+    .sign-up__inner::after {
+        top: 5px;
+        right: 5px;
+        width: 32px;
+        height: 32px;
     }
     .form__heading, .form__middle {
         flex-direction: column;
