@@ -1,0 +1,174 @@
+html {
+    height: 100%;
+    scroll-behavior: smooth;
+}
+*,*::before,
+*::after {
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    font-family: sans-serif;
+}
+img {
+    vertical-align: middle;
+    object-fit: cover;
+}
+
+.container {
+    max-width: 1240px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.sign-up {
+    padding: 100px 0;
+    height: 100%;
+    background-color: #5D8EFB;
+}
+
+.sign-up__inner {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+    width: 100%;
+    padding: 40px 80px;
+    border-radius: 10px;
+    background-color: #fff;
+}
+.sign-up__title {
+    margin: 0 0 32px;
+    color: #a8a8a8;
+    text-align: center;
+    font-size: 32px;
+}
+/* 
+.form__box {
+    margin: 0 auto;
+} */
+.form {
+    display: flex;
+    flex-direction: column;
+}
+
+.sign-up__inner::after {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    display: block;
+    width: 36px;
+    height: 36px;
+    background-image: url('../images/cross.png');
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center;
+    content: '';
+}
+.form__heading, .form__middle {
+    margin: 0 0 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.form__school__label {
+    margin-bottom: 30px;
+}
+
+.form__heading {
+    display: flex;
+    align-items: center;
+}
+
+input {
+    min-width: 280px;
+    margin-top: 8px;
+    border: 1px solid #a8a8a8;
+    outline: none;
+    padding: 12px;
+    border-radius: 4px;
+}
+
+select {
+    min-width: 280px;
+    margin-top: 8px;
+    border: 1px solid #a8a8a8;
+    outline: none;
+    padding: 12px;
+    border-radius: 4px;
+}
+
+label{
+    display: flex;
+    flex-direction: column;
+    color: #a8a8a8;
+    font-size: 12px;
+}
+
+.sign-up__btn {
+    width: 200px;
+    margin-left: auto;
+    padding: 12px;
+    border-radius: 4px;
+    border: 2px solid #5D8EFB;
+    outline: none;
+    cursor: pointer;
+    background-color: #5D8EFB;
+    transition: all 0.2s ease-in;
+    color: #fff;
+}
+
+.sign-up__btn:hover {
+    background-color: #fff;
+    color: #5D8EFB;
+}
+
+
+
+@media only screen and (max-width:576px) {
+    .sign-up__inner {
+        padding: 10px 20px;
+    }
+    .form__heading, .form__middle {
+        flex-direction: column;
+        margin: 0 0 20px;
+    }
+
+    input {
+        max-width: 280px;
+        min-width: 0;
+        width: 100%;
+    }
+
+    .sign-up__title {
+        font-size: 28px;
+        margin: 10px 0;
+    }
+
+    .form__school__label {
+        margin-bottom: 0;
+    }
+    label {
+        margin: 0 auto 20px;
+        text-align: start;
+        max-width: 280px;
+        width: 100%;
+    }
+    select {
+        max-width: 280px;
+        margin-bottom: 10px;
+        width: 100%;
+        min-width: 0;
+    }
+
+    .sign-up__btn {
+        display: block;
+        margin: 0 auto;
+        max-width: 280px;
+        width: 100%;
+    }
+}
